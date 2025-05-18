@@ -62,6 +62,7 @@ spec:
     config:
       apps:
       - name: guestbook-${{ ctx.stage }}
+        namespace: argocd-system
         sources:
         - repoURL: ${{ vars.repoURL }}
           desiredRevision: ${{ task.outputs['commit'].commit }}
